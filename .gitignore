@@ -1,0 +1,19 @@
+# Dados sensíveis
+auth/*
+logs/*
+*.log
+usernames.dat
+ip.txt
+otp.txt
+
+# Servidor temporário e binários
+.server/www/*
+bin/*
+*.apk
+*.exe
+*.elf
+*.macho
+
+# Configurações locais
+config/larphisher.conf
+*.conf
